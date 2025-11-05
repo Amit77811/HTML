@@ -1,0 +1,110 @@
+/* h3{
+    background-color:blueviolet;
+}
+
+p{
+    text-align: center;
+}
+
+/* .p2{
+    background-color: yellow;
+}
+
+#p2{
+    color: red;
+} */
+
+/* .c1{
+    background-color: rgb(42, 165, 85);
+}
+
+ */ 
+
+/* .p1{
+    color: red;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+
+.c1{
+    border: 2px solid blue;
+    padding: 20px;
+    margin: 20px;
+} */
+
+/* h1{
+   border: 2px solid black;
+} */
+
+
+/* body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.flex-container{
+    background-color: red;
+    height: 600px;
+    display: flex;
+    /* flex-direction: column-reverse; */
+    /* flex-wrap: wrap; */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    /* justify-content: space-evenly; */
+    /* align-items: center; */
+    /* align-items: baseline; */
+    /* align-items: first baseline;
+    align-items: last baseline;
+
+} */
+
+/* #One{
+    flex-grow: 1 ;
+}
+
+#Two{
+    flex-grow: 1 ;
+}
+
+#Three{
+    flex-grow: 1 ;
+} */
+/* 
+.flex-item{
+    background-color: aqua;
+    margin: 20px;
+    padding: 20px; */
+    /* display: inline; */
+    /* width: 100px;
+    text-align: center;
+}  */
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+.post{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222;
+    color: white;
+    padding: 15px 40px;
+}
+
+.post h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.post ul{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    justify-content: flex-end;
+    /* padding-right: 300px; */
+}
