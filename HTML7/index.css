@@ -1,0 +1,78 @@
+/* .grid-item{
+    background-color: wheat;
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.grid-container{
+    background-color: red;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 200px 300px 200px;
+    grid-template-rows: 100px 200px auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+#grid-5{
+    grid-area: 1/2/4/5;
+} */
+/* css two make four box at four corners  using position properties and one at center*/
+
+#parents{
+    position: relative;
+    height: 700px;
+    border: 2px solid black;
+}
+
+#one{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#two{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    position: absolute;
+    top: 0px;
+    right :0px;
+
+}
+
+#three{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    
+}
+
+#four{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#center{
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+    position: absolute;
+    top: 300px;
+    left: 700px;
+}

@@ -1,0 +1,49 @@
+/* The dot should 
+● Be a square of side = 1rem 
+● With a bottom margin of 4 pixels 
+● And should be colored #424242 
+● With a full round border (to make it a circle) 
+The square should 
+● Have a side of 1rem 
+● And should be colored #424242 
+● With a bottom margin of 4 pixels 
+The rect should 
+● Be of the dimensions 2.5rem width x 0.5rem height 
+● Colored #424242 
+● And a bottom margin of 4 pixels 
+Level 2 
+● The dot, square, and rect items should turn green defined by 
+rgba(68, 240, 76, 0.4) on hovering over them. 
+Level 3 
+● Make sure that the last element of each menu container 
+should have no bottom margin to make the design even more 
+consistent 
+● The cursor should turn into a pointer on hovering 
+over any of the menu items viz. dot, square, and rect  */
+
+
+.dot{
+    height:1rem;
+    width: 1rem;
+    background-color: #424242;
+    margin-bottom: 4px;
+    border-radius: 50%; 
+}
+
+.square{
+    height:1rem;
+    width: 1rem;
+    background-color: #424242;
+    margin-bottom: 4px;
+}
+.rect{
+    height:0.5rem;
+    width: 2.5rem;
+    background-color: #424242;
+    margin-bottom: 4px;
+}
+
+.dot:hover, .square:hover, .rect:hover {
+    background-color: green;
+    cursor: pointer;
+}

@@ -1,0 +1,242 @@
+/* 1. Header 
+○ Left: Logo / Brand name (e.g., “QTrip”) 
+○ Right: Navigation links (e.g., Home, Explore) 
+○ Layout should be a single row. 
+○ Use Flexbox to place logo on the left and nav on the right. 
+2. Hero Section 
+○ Full-width background image (travel/city style). 
+○ Centered content: 
+■ Main heading (e.g., “Welcome to QTrip”) 
+■ Subheading (1 line description) 
+■ Search bar (input box) placed below heading, 
+horizontally centered. 
+○ Use either: 
+■ background-image on a <div> or 
+■ An <img> with text absolutely positioned. 
+○ Content must be vertically and horizontally centered using 
+Flexbox. 
+3. Image Cards Section 
+○ Below the hero, create 8 cards. 
+○ Each card represents a city/place. 
+○ Each card must have: 
+■ An image (fills the top area of the card) 
+■ City name / title below the image 
+○ Use CSS Grid to arrange cards: 
+■ Desktop: 4 cards per row (2 rows) 
+■ Small screens: cards should wrap (2 per row or 1 per 
+row) – simple responsive behavior. 
+4. Footer 
+○ Simple full-width footer at bottom. 
+○ Text: e.g., “© 2025 QTrip” or any short line. 
+○ Centered text. 
+5. Colors & Fonts 
+○ Students can choose simple, clean colors and fonts. 
+○ Layout and structure should match the wireframe closely. 
+Specification Checklist 
+Level 1 – Basic Structure 
+● index.html 
+& 
+styles.css 
+session6-qtrip-takehome folder. 
+● Header contains: 
+○ Left aligned logo text. 
+○ Right aligned navigation links. 
+○ Implemented using display: flex. 
+● Hero section: 
+○ Has a visible background image. 
+created 
+○ Contains a heading, subheading, and a search input. 
+○ Content is centered (use Flexbox). 
+● Cards section: 
+○ Contains exactly 8 cards. 
+○ Each card has an image + city name. 
+○ Implemented using display: grid. 
+● Footer present and full width. 
+in 
+Level 2 – Layout & Visual Polish 
+● Header: 
+○ Has padding, subtle background color, and space between 
+logo & nav using justify-content: space-between. 
+● Hero: 
+○ Background 
+image 
+covers 
+the 
+section 
+using 
+background-size: cover; background-position: 
+center;. 
+○ Search bar has padding, border-radius. 
+● Cards grid: 
+○ Uses grid-template-columns: repeat(4, 1fr); for 
+desktop. 
+○ Has gap between cards. 
+○ Cards have padding, border-radius, and box-shadow 
+(optional but encouraged). 
+Level 3 – Image Handling & Hover Effects 
+● Card image fills the card width and fixed height properly: 
+○ Use: 
+CSS
+ .card img { 
+width: 100%; 
+height: 100%; 
+object-fit: cover; 
+display: block; 
+} 
+○  
+Or wrap image in a fixed-height container: 
+CSS
+ .card-image { 
+height: 180px; 
+overflow: hidden; 
+} 
+.card-image img { 
+width: 100%; 
+height: 100%; 
+object-fit: cover; 
+} 
+●  
+On hover: 
+○ Card shows a small effect (e.g., transform: 
+scale(1.02); or slight shadow). 
+○ Cursor becomes pointer on nav links and cards. 
+● Basic responsiveness: 
+○ Use media query: 
+CSS
+ @media (max-width: 768px) { 
+.cards-container { 
+grid-template-columns: repeat(2, 1fr); 
+} 
+} 
+@media (max-width: 480px) { 
+.cards-container { 
+grid-template-columns: 1fr; 
+} 
+} 
+How to Add Images (Guidelines for Students) 
+1. Create an images folder inside session6-qtrip-takehome. 
+2. Download 9 free images: 
+○ 1 for hero, 8 for cards (e.g., from free stock sites). 
+3. Save them as: 
+○ hero.jpg, city1.jpg, city2.jpg, …, city8.jpg 
+4. In CSS hero section: 
+CSS
+ .hero { 
+background-image: url("./images/hero.jpg"); 
+background-size: cover; 
+background-position: center; 
+} 
+5.  
+In HTML card: 
+HTML
+ <div class="card"> 
+<div class="card-image"> 
+<img src="./images/city1.jpg" alt="City 1" /> 
+HTML
+  </div> 
+  <h3>City 1</h3> 
+</div> */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.header .logo{
+    font-size: larger;
+    font-weight: bold;
+}
+.header .nav a{
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.header .nav a:hover{
+    text-decoration: underline;
+}
+
+.hero{
+    height:400px;
+    background-image: url("image/image.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1{
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+.hero p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero input[type="text"]{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 300px;
+    max-width: 80%;
+}
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.card{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+ .card img { 
+width: 100%; 
+height: 100%; 
+object-fit: cover; 
+display: block; 
+}
+ .card-image { 
+height: 180px; 
+overflow: hidden; 
+}  
+ .card-image img {
+width: 100%;
+height: 100%;
+object-fit: cover; 
+
+}
+.card h3{
+    text-align: center;
+    padding: 10px 0;
+}
+.card:hover{
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+.footer{
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+
