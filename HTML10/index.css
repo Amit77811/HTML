@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background-color: #ffffff;
+  color: #111;
+}
+
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  /* opacity: 0.35; */
+}
+
+
+.sidebar {
+  width: 230px;
+   background: rgba(249, 249, 249, 0.6); /* semi-transparent */
+  /* backdrop-filter: blur(10px); */
+  border-right: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 25px 20px;
+}
+
+.logo {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: #111;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.2s;
+}
+
+.menu-item:hover {
+  color: #0a66c2;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.4); /* light glass */
+  /* backdrop-filter: blur(10px);; */
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 15px 25px;
+}
+
+.top-left {
+  font-weight: 500;
+}
+
+.top-right button {
+  border: none;
+  border-radius: 20px;
+  padding: 7px 14px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+.login {
+  background-color: #111;
+  color: #fff;
+}
+
+.signup {
+  background-color: transparent;
+  border: 1px solid #ccc;
+}
+
+.signup:hover {
+  background-color: #f7f7f7;
+}
+
+.center-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+}
+
+.center-content h1 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  padding: 10px 20px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.input-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 8px 10px;
+  background: transparent;
+}
+
+.plus {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  color: #666;
+}
+
+.mic {
+  background: #f3f3f3;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.voice {
+  background: #f3f3f3;
+  border-radius: 50%;
+  padding: 8px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+

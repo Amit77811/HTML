@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat UI</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <video autoplay loop muted playsinline class="bg-video">
+    <source src="video1.mp4" type="video/mp4">
+    </video>
+  <div class="chat-app">
+
+    <aside class="sidebar">
+      <div class="profile">
+      <div class="image"><i class="ri-user-line"></i></div>      
+      <h3>Amit</h3>
+      </div>
+
+      <div class="contacts">
+        <div class="contact"><i class="ri-user-fill"></i> Himanshu</div>
+        <div class="contact"><i class="ri-user-fill"></i> Vibhuti</div>
+        <div class="contact active"><i class="ri-user-fill"></i> Jayesh</div>
+        <div class="contact"><i class="ri-user-fill"></i> Romee</div>
+      </div>
+    </aside>
+
+    <main class="chat-window">
+
+      <header class="chat-header">
+        <div>
+          <h2>Jayesh</h2>
+          <div class="video-chat"><i class="ri-video-chat-line"></i></div>
+          <div class="voice-chat"><i class="ri-phone-line"></i></div>
+          <p class="status">Online</p>
+        </div>
+      </header>
+
+      <div class="messages">
+        <div class="message incoming">Bhai class kitila aahe?</div>
+        <div class="message outgoing">2 la aahe</div>
+        <div class="message incoming">OK</div>
+      </div>
+
+      <footer class="chat-input">
+        <input type="text" placeholder="Type a message..." />
+        <button>Send</button>
+      </footer>
+
+    </main>
+
+  </div>
+</body>
+</html>
