@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    
+</head>
+<body>
+
+
+    <!-- <div>
+        <h1 class="title"> Welcome</h1>
+    </div>
+
+    <h2 id = "msg">Hello Students</h2>
+    <button id="btn">Click</button> -->
+
+    <!-- Add a  h2 and p tag in div by click on button using innerhtml -->
+    <!-- <div id="info"></div>
+    <button id="Btn">Click</button> -->
+
+    <!-- Change whole inside p tag on click  -->
+    <p id="change">name:unknown</p>
+    <button id="changeBtn">click</button>
+
+    <!-- Change background colour on click -->
+    <h2>Change background Colour</h2>
+    <button id="bgBtn">Change colour</button>
+
+
+
+    <script>
+        // console.log("Hello world from js");
+        // document.write("Hello world from js");
+        // alert("Hello");
+
+        // let num1 = Number(prompt("Enter first number: "));
+        // let num2 = Number(prompt("Enter second number: "));
+        // let num3 = Number(prompt("Enter third number: "));
+        // let num4 = parseInt(prompt("Enter fourth number: "));
+
+        // let result = num1 + num2;
+        // document.writeln("The result is:" + result);
+
+        // document.writeln(num3);
+        // document.writeln(num4);
+
+        // let heading = document.getElementsById("heading");
+        // console.log(heading.innerText);
+
+        // let classPara = document.getElementsByClassName("para");
+        // console.log(classPara);
+
+        // let heading2 = document.querySelector("#heading2");
+        // let classPara2 = document.querySelector(".para");
+        // console.log(classPara2);
+
+        // let heading3 = document.querySelectorAll("#heading");
+        // let classPara3 = document.querySelectorAll(".para"); 
+        // console.log(classPara3);
+
+        // document.getElementById("btn").addEventListener("click", function() {
+        //     document.getElementById("msg").innerText = "Welcome to DOM";
+        // });
+
+
+        // document.getElementById("Btn").addEventListener("click", function(){
+        //     document.getElementById("info").innerHTML = "<h2>Hello</h2><p>Text is created using JavavaScript</p>";
+        // })
+
+        // document.getElementById("changeBtn").addEventListener("click",function(){
+        //     document.getElementById("change").innerText = "Rahul Sharma";
+        // })
+        document.getElementById("bgBtn").addEventListener("click", function(){
+            document.body.style.backgroundColor = "lightblue";
+
+        });
+        
+    </script>
+    
+</body>
+</html>

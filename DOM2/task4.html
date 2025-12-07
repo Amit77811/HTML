@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>\
+    <link rel="stylesheet" href="task4.css">
+</head>
+<body>
+    <div class="box">
+        <h2>Counter App</h2>
+        <h1 id="count">0</h1>
+
+        <button id="inc">+</button>
+        <button id="dec">-</button>
+        <button id="reset">Reset</button>
+        <p id="previous"></p>
+
+  </div>
+
+
+
+        <script>
+            let count1 = document.getElementById("count");
+            let incBtn = document.getElementById("inc");
+            let decBtn = document.getElementById("dec");
+            let resetBtn = document.getElementById("reset");
+
+            incBtn.addEventListener("click",function(){
+            let oldValue = Number(count1.textContent); 
+            let newValue = oldValue + 1;
+            count1.textContent = newValue;
+            previous.textContent = "Previous value: " + oldValue;
+            });
+
+            decBtn.addEventListener("click",function(){
+                let countValue = Number(count1.textContent);
+                countValue--;
+                count1.textContent = countValue;
+                if(countValue > 0){
+                    countValue--;
+                }
+                else{
+                    decBtn.disabled = true;
+                }
+            });
+
+            resetBtn.addEventListener("click", function(){
+                count1.textContent = 0;
+            });
+
+        
+
+
+
+        </script>
+
+
+
+    </div>
+</body>
+</html>

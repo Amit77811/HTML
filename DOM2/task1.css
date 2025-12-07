@@ -1,0 +1,42 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.box{
+    width: 230px;
+    height:220px;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    background-color:#fff;
+    margin: 20px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+h2{
+    text-align: center;
+    color: #333;
+    font-family: sans-serif;
+    margin-top: 35px;
+}
+
+#addToCartBtn{
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: rgb(9, 9, 182);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+p{
+    text-align: center;
+    color: #666;
+    font-family: sans-serif;
+    margin-top: 15px;
+}
+

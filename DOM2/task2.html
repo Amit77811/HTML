@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+    <div class="box">
+        <h2 >Limited Counter(0-10)</h2>
+        <p id="num">0</p>
+        <button id="add">Add</button>
+        <p id="inc">Click Add to increase the Number</p>
+    </div>
+
+
+
+    <script>
+        document.getElementById("add").addEventListener("click", function(){
+            let numElement = document.getElementById("num");
+            let incElement = document.getElementById("inc");
+
+            let num = Number(numElement.textContent);
+
+            if (num < 10) {
+                num++;
+                numElement.textContent = num;
+                incElement.textContent = "Number increased";
+            } else {
+                incElement.textContent = "You have reached the limit";
+            }
+
+            // 2nd Method:
+
+            // if(num >= 10){
+            //     document.getElementById("inc").textContent = "You have reached the limit";
+            //     document.getElementById("add").disabled = true;
+            // }
+        });
+
+       
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Debug This UI</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #eef1f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #productCard {
+      width: 320px;
+      background: #ffffff;
+      padding: 18px;
+      border-radius: 18px;
+      box-shadow: 0px 12px 40px rgba(0,0,0,0.12);
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    #prodImage {
+      width: 100%;
+      border-radius: 14px;
+      transition: transform 0.3s ease;
+      display: block;
+      margin: 0 auto;
+    }
+
+    #prodImage:hover {
+      transform: scale(1.05);
+    }
+
+    #title {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 10px 0;
+    }
+
+    #ratingBox {
+      font-size: 22px;
+      color: #facc15;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    #cartCount {
+      font-size: 32px;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    #addBtn {
+      width: 100%;
+      background: #4f46e5;
+      color: white;
+      padding: 12px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.2s;
+    }
+
+    #addBtn:hover { background: #4338ca; }
+
+    #heartIcon {
+      font-size: 30px;
+      color: #bbb;
+      cursor: pointer;
+      margin-top: 15px;
+      user-select: none;
+      transition: color 0.2s, transform 0.12s;
+      display: inline-block;
+    }
+
+    #heartIcon.liked {
+      background-color: #e11d48; 
+      transform: scale(1.08);
+    }
+  </style>
+</head>
+<body>
+
+  <div id="productCard">
+    <h1 id="title"></h1>
+
+    <img id="prodImage"
+         src="https://images.unsplash.com/photo-1593696954577-ab3d39317b97?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZyZWUlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D"/>
+
+    <div id="ratingBox">★★★★★</div>
+
+    <div id="cartCount">0</div>
+
+    <button id="addBtn" type="button">Add to Cart</button>
+
+    <div id="heartIcon" aria-label="like button" role="button">♡</div>
+  </div>
+
+  <script>
+    const productCard = document.getElementById('productCard');
+    const prodImage = document.getElementById('prodImage');
+    const cartCountEl = document.getElementById('cartCount');
+    const addBtn = document.getElementById('addBtn');
+    const heartIcon = document.getElementById('heartIcon');
+    const titleEl = document.getElementById('title');
+
+    // titleEl.textContent = 'Premium Chocolate';
+
+    // Add to cart
+    addBtn.addEventListener('click', function () {
+      let count = Number(cartCountEl.textContent);
+      count++;
+      cartCountEl.textContent = count;
+      productCard.style.backgroundColor = '#fff9db';
+      titleEl.textContent = 'Premium Chocolate';
+    });
+
+
+    document.getElementById("heartIcon").addEventListener("click", function(){
+        heartIcon.style.color = "red";
+    });
+
+   
+   
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="task1.css">
+</head>
+<body>
+    <div class="box">
+        <h2>Simple Add to cart</h2>
+        <button id="addToCartBtn">Add to cart</button>
+        <p id="cartMessage">Try Hover, Click or Move away</p>
+    </div>
+
+
+
+    <script>
+        const addToCartBtn = document.getElementById('addToCartBtn');
+        const cartMessage = document.getElementById('cartMessage');
+
+        addToCartBtn.addEventListener("click", function(){
+            cartMessage.textContent = "Item added to cart";
+        });
+
+        addToCartBtn.addEventListener("mouseover", function(){
+            cartMessage.textContent = "Ready to add item";
+        });
+
+         addToCartBtn.addEventListener("mouseout", function(){
+            cartMessage.textContent = "You moved away";
+        });
+
+
+
+
+
+    </script>
+
+
+    
+</body>
+</html>
